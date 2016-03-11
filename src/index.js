@@ -4,7 +4,7 @@ var findLocal = require("./findLocal"),
 
 var task = module.exports = require(findLocalModule("task")),
     args = process.argv.slice(2),
-    command = args[0];
+    command = args[0] || "default";
 
 
 require(findLocal("taskfile.js"));
