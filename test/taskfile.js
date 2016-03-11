@@ -10,18 +10,20 @@ function createTask(name) {
 }
 
 
-task("series", task.series(
+task("series", "runs a series of tasks", task.series(
     createTask("series0"),
     createTask("series1")
 ));
 
-task("parallel", task.parallel(
+task("parallel", "runs tasks in parallel", task.parallel(
     createTask("parallel0"),
     createTask("parallel1")
 ));
 
-task("complex", task.parallel(
+task("complex", "runs some very complex tasks", task.parallel(
     createTask("simple"),
     task("series"),
     task("parallel")
 ));
+
+task("default", task("complex"));

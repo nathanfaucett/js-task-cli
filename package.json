@@ -33,6 +33,7 @@
     "zuul": "^3.7.2"
   },
   "dependencies": {
+    "apply": "git://github.com/nathanfaucett/apply.git",
     "file_path": "git://github.com/nathanfaucett/file_path.git"
   }
 }
