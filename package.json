@@ -10,9 +10,6 @@
   "bin": {
     "task": "./bin/index.js"
   },
-  "scripts": {
-    "test": "npm run test-node"
-  },
   "keywords": [
     "task-cli",
     "task-cli.js"
@@ -24,8 +21,6 @@
     "grunt": "^0.4.5",
     "grunt-contrib-jshint": "^0.11.3",
     "grunt-jsbeautifier": "^0.2.10",
-    "tap-spec": "^4.1.0",
-    "tape": "^4.2.2",
     "task": "git://github.com/nathanfaucett/task.git"
   },
   "dependencies": {
