@@ -1,4 +1,4 @@
-var task = require("..");
+var task = require("task");
 
 
 function createTask(name) {
