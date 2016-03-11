@@ -3,6 +3,7 @@ var task = require("task");
 
 function createTask(name) {
     function simple(done) {
+        console.log(name);
         done();
     }
     simple.displayName = name;
@@ -27,3 +28,9 @@ task("complex", "runs some very complex tasks", task.parallel(
 ));
 
 task("default", task("complex"));
+
+task(function watch() {
+    task.watch([
+        "./taskfile.js"
+    ], task("default"));
+});

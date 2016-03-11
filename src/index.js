@@ -11,7 +11,7 @@ require(findLocal("taskfile.js"));
 
 
 if (command === "--help") {
-    console.log("task help:\n\r" + task.help(args[1]));
+    console.log("\n\rtask help:\n\r\n\r" + task.help(args[1]));
 } else {
     task.run(command, function onDone(error) {
         if (error) {

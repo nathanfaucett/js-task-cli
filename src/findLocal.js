@@ -21,6 +21,6 @@ function findLocal(id) {
                 return fullPath;
             }
         }
-        throw new Error("could not find local " + id);
+        throw new Error("could not find " + id);
     }
 }
