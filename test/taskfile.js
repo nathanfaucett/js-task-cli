@@ -1,4 +1,4 @@
-var task = require("task");
+var task = require("@nathanfaucett/task");
 
 
 function createTask(name) {

@@ -1,7 +1,7 @@
 {
-  "name": "task-cli",
+  "name": "@nathanfaucett/task-cli",
   "version": "0.0.1",
-  "description": "task-cli for node.js",
+  "description": "cli for task scheduler",
   "repository": {
     "type": "git",
     "url": "https://github.com/nathanfaucett/task-cli.git"
@@ -18,13 +18,13 @@
   "license": "MIT",
   "readmeFilename": "README.md",
   "devDependencies": {
-    "grunt": "^0.4.5",
-    "grunt-contrib-jshint": "^0.11.3",
-    "grunt-jsbeautifier": "^0.2.10",
-    "task": "git://github.com/nathanfaucett/task.git"
+    "grunt": "^1.0.1",
+    "grunt-contrib-jshint": "^1.0.0",
+    "grunt-jsbeautifier": "^0.2.13",
+    "@nathanfaucett/task": "^0.0.1"
   },
   "dependencies": {
-    "apply": "git://github.com/nathanfaucett/apply.git",
-    "file_path": "git://github.com/nathanfaucett/file_path.git"
+    "@nathanfaucett/apply": "^0.0.1",
+    "@nathanfaucett/file_path": "^0.0.2"
   }
 }
