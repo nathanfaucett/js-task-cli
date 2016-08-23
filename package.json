@@ -1,6 +1,6 @@
 {
   "name": "@nathanfaucett/task-cli",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "cli for task scheduler",
   "repository": {
     "type": "git",
@@ -21,7 +21,7 @@
     "grunt": "^1.0.1",
     "grunt-contrib-jshint": "^1.0.0",
     "grunt-jsbeautifier": "^0.2.13",
-    "@nathanfaucett/task": "^0.0.3"
+    "@nathanfaucett/task": "^0.0.4"
   },
   "dependencies": {
     "@nathanfaucett/file_path": "^0.0.2",
