@@ -45,7 +45,7 @@ if (command === "--help") {
     task.on("Task.end", function onStart(task) {
         console.log(
             "[" + colors.grey(formatDate(new Date(task.endTime))) + "]",
-            "Finished " + colors.cyan(task.name),
+            "Finished \"" + colors.cyan(task.name) + "\"",
             "after " + colors.magenta(((task.endTime - task.startTime) | 0) + " ms")
         );
     });
