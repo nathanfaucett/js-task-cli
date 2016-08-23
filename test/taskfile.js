@@ -1,4 +1,5 @@
-var task = require("@nathanfaucett/task");
+var Stream = require("stream"),
+    task = require("@nathanfaucett/task");
 
 
 function createTask(name) {
@@ -9,14 +10,34 @@ function createTask(name) {
     return simple;
 }
 
+function createStreamTask(name) {
+    var readable = new Stream.Readable(),
+        writable = new Stream.Writable();
+
+    readable._read = function() {};
+    writable.writable = true;
+    writable.write = function() {};
+
+    function simple() {
+        setTimeout(function onNextTick() {
+            readable.emit("data", "");
+            readable.emit("end");
+        }, Math.random() * 100);
+        return readable.pipe(writable);
+    }
+    simple.displayName = name;
+
+    return simple;
+}
+
 
 task("series", "runs a series of tasks", task.series(
     createTask("series0"),
-    createTask("series1")
+    createStreamTask("series1")
 ));
 
 task("parallel", "runs tasks in parallel", task.parallel(
-    createTask("parallel0"),
+    createStreamTask("parallel0"),
     createTask("parallel1")
 ));
 
