@@ -5,7 +5,7 @@ var fs = require("fs"),
 module.exports = findLocal;
 
 
-function findLocal(id) {
+function findLocal(id, type, name) {
     var root = process.cwd(),
         depth = root.split(filePath.separator).length,
         fullPath = filePath.join(root, id);
@@ -21,6 +21,6 @@ function findLocal(id) {
                 return fullPath;
             }
         }
-        throw new Error("could not find " + id);
+        throw new Error("could not find " + (type || "file") + " " + (name || id));
     }
 }

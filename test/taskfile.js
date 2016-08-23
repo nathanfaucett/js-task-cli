@@ -3,8 +3,7 @@ var task = require("@nathanfaucett/task");
 
 function createTask(name) {
     function simple(done) {
-        console.log(name);
-        done();
+        setTimeout(done, Math.random() * 100);
     }
     simple.displayName = name;
     return simple;
